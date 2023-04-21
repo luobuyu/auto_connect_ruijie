@@ -37,8 +37,9 @@ def job():
 
 def main():
     # 定时执行 job 函数
+    job()
     scheduler = BlockingScheduler(timezone='Asia/Shanghai')
-    scheduler.add_job(job, "interval", hours=6)
+    scheduler.add_job(job, "interval", hours=1)
     scheduler.start()
 
 
